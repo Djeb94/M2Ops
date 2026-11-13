@@ -23,7 +23,9 @@ services:
       retries: 20
 
   app:
-    build: .
+    build:
+      context: .
+      target: runtime
     environment:
       PREFECT_API_URL: http://prefect:4200/api
       DATABASE_URL: postgresql://gazette:${POSTGRES_PASSWORD:-gazette_dev}@postgres:5432/gazette
