@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Lint + tests dans l'image, identique à ce qui est livré.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+docker build --target test -t gazette:test .
+docker run --rm gazette:test

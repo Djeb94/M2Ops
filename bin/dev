@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Lance l'environnement de dev complet : Postgres + Prefect + app.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+docker compose up --build "$@"
