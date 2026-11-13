@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart TB
-    SRC["Flux RSS · 8 sources<br/>titre, extrait, lien, date"]
+    SRC["Flux RSS · X sources<br/>titre, extrait, lien, date"]
 
     subgraph RUN["Docker Compose · nos postes, puis serveur fourni"]
         C["1 · Collecte<br/>Python + feedparser"]
